@@ -5,9 +5,9 @@ using namespace std;
 
 int main(){
     ofstream ofs("My.txt",ios::trunc);
-    ofs<<"Ashith Kumar Gowda "<<endl;
+    ofs<<"Ashith Kumar Gowda"<<endl;
     ofs<<19<<endl;
-    ofs<<"CSD"<<endl;
+    ofs<<"Computer Science and Design"<<endl;
     ofs.close();
     ifstream infile;
     infile.open("My.txt");
@@ -19,7 +19,12 @@ int main(){
     int roll;
     string branch;
 
-    infile>>name>>roll>>branch;
+    // infile>>name>>roll>>branch;
+    getline(infile,name);
+    infile>>roll;
+     infile.ignore();
+    // getline(infile,roll);
+    getline(infile,branch);
     cout<<"Name "<<name<<endl;
     cout<<"Roll "<<roll<<endl;
     cout<<"Branch "<<branch<<endl;
