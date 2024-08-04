@@ -80,9 +80,10 @@ int main(){
     int id;
     cout<<"Are you a Part time Employee ?? [Y/N]"<<endl;
     cin>>response;
+    cin.ignore();
     if(response=='Y'||response=='y'){
         cout<<"Enter your name"<<endl;
-        cin>>name;
+        getline(cin,name);
         cout<<"Enter your Employee id"<<endl;
         cin>>id;
         partTimeEmp pt(id,name);
@@ -90,7 +91,7 @@ int main(){
     }
     else if(response=='N'||response=='n'){
         cout<<"Enter your name"<<endl;
-        cin>>name;
+        getline(cin,name);
         cout<<"Enter your Employee id"<<endl;
         cin>>id;
         fullTimeEmp ft(id,name);
